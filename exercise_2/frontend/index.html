@@ -11,7 +11,7 @@
     <p>Version 0.2</p>
 
     <script>
-        fetch('http://54.243.201.83/').then(resp => resp.json()).then(data => {
+        fetch('http://54.243.201.83/', {mode:"no-cors"}).then(resp => resp.json()).then(data => {
             document.getElementById("fortune").innerText = data.fortune;
         })
     </script>
