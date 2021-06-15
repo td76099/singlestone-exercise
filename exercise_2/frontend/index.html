@@ -11,7 +11,7 @@
     <p>Version 0.2</p>
 
     <script>
-        fetch('fortune-lb-listener-1967799136.us-east-1.elb.amazonaws.com').then(resp => resp.json()).then(data => {
+        fetch('fortune-lb-listener-1967799136.us-east-1.elb.amazonaws.com/').then(resp => resp.json()).then(data => {
             document.getElementById("fortune").innerText = data.fortune;
         })
     </script>

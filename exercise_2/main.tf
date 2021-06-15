@@ -66,7 +66,7 @@ resource "aws_launch_configuration" "web-conf" {
     #! /bin/bash
     yum update
     yum -y install nginx
-    echo "<h1>Hello World</h1>" >> /usr/share/nginx/html/index.html
+    echo "$(curl https://raw.githubusercontent.com/td76099/singlestone-exercise/main/exercise_2/frontend/index.html)" > /usr/share/nginx/html/index.html
     chkconfig nginx on
     service nginx start
     EOF
